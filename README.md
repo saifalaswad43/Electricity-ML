@@ -36,11 +36,20 @@
 
 ## ⚡ Overview
 
-**Electricity Consumption AI** is a Streamlit web app that predicts your **monthly electricity consumption (kWh)** for any device, room, or usage pattern — combining a trained **Machine Learning model** with a transparent **physics-based formula**, side by side. Model artifacts are pulled live from the **Hugging Face Hub**, so the app always runs the latest trained pipeline without shipping heavy files in the repo. It comes packed with cost estimation, CO₂ impact tracking, saving recommendations, and rich interactive analytics.
+**Electricity Consumption AI** is a Streamlit web app that predicts your **monthly electricity consumption (kWh)** for any device, room, or usage pattern — combining a trained **Machine Learning model** with a transparent **physics-based formula**, side by side. Model artifacts are pulled live from the **Hugging Face Hub**, so the app always runs the latest trained pipeline without shipping heavy files in the repo. It comes packed with cost estimation, CO₂ impact tracking, saving recommendations, and rich interactive analytics — now with a redesigned, animated interface.
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.gif" width="480">
 </div>
+
+---
+
+## 🆕 What's new in this update
+
+- **Redesigned UI** — animated gradient hero header, glowing tier badges, and hover-responsive metric cards for a more professional feel.
+- **Smoother motion** — fade-in transitions on results, a pulsing usage-tier badge, and shimmering background gradients instead of static panels.
+- **Reproducibility fix** — the training notebook previously hard-coded a local Windows path (`D:\saifproject\...`) to load `electricity_dataset.csv`; it now uses a relative path so the notebook runs for anyone who clones the repo.
+- **Pipeline parity** — the app's inference code now mirrors the notebook's exact `apply_basic_cleaning → impute → encode → scale → select → predict` order, so predictions match the notebook's own end-to-end test.
 
 ---
 
@@ -60,10 +69,10 @@
 <td width="50%" valign="top">
 
 ### 📊 Analysis
-- Consumption trend over time (Plotly line chart)
-- Tier distribution donut chart
+- Consumption distribution across the dataset (Plotly)
+- Session tier-distribution donut chart
 - Device-level breakdown & averages
-- Cost-per-tier comparison chart
+- Dark-themed, animated charts
 
 </td>
 </tr>
@@ -83,7 +92,7 @@
 - 💰 Monthly bill estimation
 - 🌳 CO₂ emissions & trees-needed equivalent
 - 💡 Personalized energy-saving tips by tier
-- 🏷️ Low / Medium / High / Very High usage badges
+- 🏷️ Low / Medium / High / Very High usage badges with animated glow
 
 </td>
 </tr>
@@ -108,7 +117,7 @@ flowchart LR
 
 The app cross-checks every ML prediction against a **physics-based sanity formula** (`watts × hours × quantity × days ÷ 1000`) and flags results that fall outside a physically plausible range — so you never get a silently broken prediction.
 
-**Consumption tiers:** `Low` → `Medium` → `High` → `Very High`, each with tailored saving tips and a color-coded badge.
+**Consumption tiers:** `Low` → `Medium` → `High` → `Very High`, each with tailored saving tips and a color-coded, glowing badge.
 
 ---
 
