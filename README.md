@@ -16,6 +16,12 @@
 
 <br/><br/>
 
+<a href="https://electricity-ml-5zhdpjyvagfwxxzsknhxjv.streamlit.app/">
+  <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit" />
+</a>
+
+<br/><br/>
+
 <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
 <img src="https://img.shields.io/badge/Scikit--learn-1.7.2-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
@@ -35,6 +41,8 @@
 </div>
 
 ## ⚡ Overview
+
+🔗 **Live demo:** [electricity-ml-5zhdpjyvagfwxxzsknhxjv.streamlit.app](https://electricity-ml-5zhdpjyvagfwxxzsknhxjv.streamlit.app/)
 
 **Electricity Consumption AI** is a Streamlit web app that predicts your **monthly electricity consumption (kWh)** for any device, room, or usage pattern — combining a trained **Machine Learning model** with a transparent **physics-based formula**, side by side. Model artifacts are pulled live from the **Hugging Face Hub**, so the app always runs the latest trained pipeline without shipping heavy files in the repo. It comes packed with cost estimation, CO₂ impact tracking, saving recommendations, and rich interactive analytics — now with a redesigned, animated interface.
 
